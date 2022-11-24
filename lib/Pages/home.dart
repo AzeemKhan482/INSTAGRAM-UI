@@ -4,10 +4,10 @@ import 'package:instagram/util/user_posts.dart';
 class UserHome extends StatelessWidget {
 final List people =[
       'Azeem',
-      'Azeem',
-      'Azeem',
-      'Azeem',
-      'Azeem',
+      'Maha',
+      'Mazz',
+      'Hamza',
+      'Ali',
       'Azeem',
      'Azeem',
      'Azeem',
@@ -41,7 +41,7 @@ final List people =[
       ),
       body:Column(
         children: [
-          //sTORIES
+          ///sTORIES
         Container(
           height: 130,
           child: ListView.builder(

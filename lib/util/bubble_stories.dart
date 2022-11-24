@@ -14,7 +14,7 @@ BubbleStories({required this.text});
 
             width: 60,
             height: 60 ,
-            decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.grey[400],),
+            decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.purple[200],),
           ),
           SizedBox(
             height: 10,
