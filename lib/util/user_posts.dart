@@ -6,6 +6,7 @@ class UserPosts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.all(16.0),
@@ -70,7 +71,8 @@ class UserPosts extends StatelessWidget {
           padding: const EdgeInsets.only(left: 16.0),
           child: Row(
             children: [
-              Text('Liked By'), Text(' Azeem',style: TextStyle(fontWeight: FontWeight.bold ),),
+              Text('Liked By'), Text(name
+                ,style: TextStyle(fontWeight: FontWeight.bold ),),
               Text(' And '),
               Text('Others',style: TextStyle(fontWeight: FontWeight.bold ),),
             ],
@@ -81,9 +83,10 @@ class UserPosts extends StatelessWidget {
           padding: const EdgeInsets.only(left: 16.0, top: 8),
           child: RichText(
     text: TextSpan(
+      style: TextStyle(color: Colors.black),
       children: [
-        TextSpan(text: 'MuhibFreiend',style: TextStyle(fontWeight: FontWeight.bold)),
-        TextSpan(text: ' i turn the dirt they throwing into riches til im filthy'),
+        TextSpan(text: name,style: TextStyle(fontWeight: FontWeight.bold)),
+        TextSpan(text: '  i turn the dirt they throwing into riches til im filthy'),
       ]
     ),
     )

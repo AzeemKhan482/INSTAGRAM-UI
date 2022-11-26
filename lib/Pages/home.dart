@@ -1,14 +1,16 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:instagram/util/bubble_stories.dart';
 import 'package:instagram/util/user_posts.dart';
 class UserHome extends StatelessWidget {
 final List people =[
-      'Azeem',
-      'Maha',
-      'Mazz',
-      'Hamza',
-      'Ali',
-      'Azeem',
+      'Azeem Lodhi',
+      'Sufyan Lodhi',
+      'Maaz Jafar',
+      'Muhib Memon',
+      'Huzefa Tariq',
+      'Hannan Iqbal',
      'Azeem',
      'Azeem',
     'Azeem',
@@ -24,7 +26,7 @@ final List people =[
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Instagram',style: TextStyle(color: Colors.black),
+            Text('Instagram',style: TextStyle(color: Colors.black,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold),
             ),
             Row(
               children: [
@@ -53,9 +55,15 @@ final List people =[
           
         ),
           ///POSTS
-          UserPosts(name: 'Azeem'),
-        ],
-
+      Expanded(
+        child: ListView.builder(
+          itemCount: people.length,
+          itemBuilder:(context,index){
+            return UserPosts(name: people[index],
+            );
+                },     ),
+      ),
+]
       ),
     );
   }
